@@ -153,31 +153,10 @@ def get_aircraft_statistics(icao: str) -> dict:
     """
     prepared_dir = os.path.join(settings.prepared_dir, "day=20231101")
     stats_file = os.path.join(prepared_dir, 'statistics.csv')
-    
-  
-    stats = pd.read_csv(stats_file)
-     prepared_dir = os.path.join(settings.prepared_dir, "day=20231101")
-    stats_file = os.path.join(prepared_dir, 'statistics.csv')
-    
-    if not os.path.exists(stats_file):
-        raise HTTPException(status_code=400, detail="Data not prepared. Call /aircraft/prepare first")
-    
+
     stats = pd.read_csv(stats_file)
     aircraft_stats = stats[stats['icao'] == icao]
     
-    if len(aircraft_stats) == 0:
-        raise HTTPException(status_code=404, detail=f"Aircraft {icao} not found")
-    
-    # Converter para dicionário e garantir tipos corretos
-    stats_dict = aircraft_stats.iloc[0].to_dict()
-    stats_dict['had_emergency'] = bool(stats_dict['had_emergency'])  # garantir que é boolean
-    stats_dict['max_altitude_baro'] = float(stats_dict['max_altitude_baro'])  # garantir que é float
-    stats_dict['max_ground_speed'] = float(stats_dict['max_ground_speed'])  # garantir que é float
-    
-    return stats_dict
-    
-    if len(aircraft_stats) == 0:
-        raise HTTPException(status_code=404, detail=f"Aircraft {icao} not found")
     
     # Converter para dicionário e garantir tipos corretos
     stats_dict = aircraft_stats.iloc[0].to_dict()
