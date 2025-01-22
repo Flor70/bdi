@@ -6,6 +6,12 @@ from fastapi.params import Query
 
 from bdi_api.settings import Settings
 
+import requests
+import os
+import glob
+import json
+import pandas as pd
+
 settings = Settings()
 
 s1 = APIRouter(
@@ -52,6 +58,28 @@ def download_data(
     base_url = settings.source_url + "/2023/11/01/"
     # TODO Implement download
 
+    os.makedirs(download_dir, exist_ok=True)
+
+    for f in glob.glob(os.path.join(download_dir, "*.gz")):
+        os.remove(f)
+
+    for i in range(0, file_limit*5, 5):  
+        file_name = str(i).zfill(6) + 'Z.json.gz'
+        file_url = f"{base_url}/{file_name}"
+
+        response = requests.get(file_url) # , params=params, headers=headers
+
+        file_path = os.path.join(download_dir, file_name)
+        print(f'i: {i} ')
+        print(f'file name: {file_name} ')
+
+
+        if response.status_code == 200:  
+            print('response = 200')
+            with open(file_path, 'w') as f:
+                json.dump(response.json(), f)
+                print('arquivo criado')
+
     return "OK"
 
 
@@ -75,6 +103,10 @@ def prepare_data() -> str:
     Keep in mind that we are downloading a lot of small files, and some libraries might not work well with this!
     """
     # TODO
+
+
+
+
     return "OK"
 
 
@@ -83,8 +115,12 @@ def list_aircraft(num_results: int = 100, page: int = 0) -> list[dict]:
     """List all the available aircraft, its registration and type ordered by
     icao asc
     """
-    # TODO
-    return [{"icao": "0d8300", "registration": "YV3382", "type": "LJ31"}]
+    prepared_dir = os.path.join(settings.prepared_dir, "day=20231101")
+    info_file = os.path.join(prepared_dir, 'aircraft_info.csv')
+    
+    aircraft_info = pd.read_csv(info_file)
+    
+    return aircraft_info.to_dict('records')    
 
 
 @s1.get("/aircraft/{icao}/positions")
@@ -92,8 +128,19 @@ def get_aircraft_position(icao: str, num_results: int = 1000, page: int = 0) -> 
     """Returns all the known positions of an aircraft ordered by time (asc)
     If an aircraft is not found, return an empty list.
     """
-    # TODO implement and return a list with dictionaries with those values.
-    return [{"timestamp": 1609275898.6, "lat": 30.404617, "lon": -86.476566}]
+    prepared_dir = os.path.join(settings.prepared_dir, "day=20231101")
+    positions_file = os.path.join(prepared_dir, 'positions.csv')
+    
+
+    positions = pd.read_csv(positions_file)
+    aircraft_positions = positions[positions['icao'] == icao]
+    if len(aircraft_positions) == 0:
+        return []  # Retorna lista vazia se não encontrar o avião
+    
+    
+    # Ordenar por timestamp e converter para lista de dicionários
+    aircraft_positions = aircraft_positions.sort_values('timestamp')
+    return aircraft_positions.to_dict('records')
 
 
 @s1.get("/aircraft/{icao}/stats")
@@ -104,5 +151,38 @@ def get_aircraft_statistics(icao: str) -> dict:
     * max_ground_speed
     * had_emergency
     """
-    # TODO Gather and return the correct statistics for the requested aircraft
-    return {"max_altitude_baro": 300000, "max_ground_speed": 493, "had_emergency": False}
+    prepared_dir = os.path.join(settings.prepared_dir, "day=20231101")
+    stats_file = os.path.join(prepared_dir, 'statistics.csv')
+    
+  
+    stats = pd.read_csv(stats_file)
+     prepared_dir = os.path.join(settings.prepared_dir, "day=20231101")
+    stats_file = os.path.join(prepared_dir, 'statistics.csv')
+    
+    if not os.path.exists(stats_file):
+        raise HTTPException(status_code=400, detail="Data not prepared. Call /aircraft/prepare first")
+    
+    stats = pd.read_csv(stats_file)
+    aircraft_stats = stats[stats['icao'] == icao]
+    
+    if len(aircraft_stats) == 0:
+        raise HTTPException(status_code=404, detail=f"Aircraft {icao} not found")
+    
+    # Converter para dicionário e garantir tipos corretos
+    stats_dict = aircraft_stats.iloc[0].to_dict()
+    stats_dict['had_emergency'] = bool(stats_dict['had_emergency'])  # garantir que é boolean
+    stats_dict['max_altitude_baro'] = float(stats_dict['max_altitude_baro'])  # garantir que é float
+    stats_dict['max_ground_speed'] = float(stats_dict['max_ground_speed'])  # garantir que é float
+    
+    return stats_dict
+    
+    if len(aircraft_stats) == 0:
+        raise HTTPException(status_code=404, detail=f"Aircraft {icao} not found")
+    
+    # Converter para dicionário e garantir tipos corretos
+    stats_dict = aircraft_stats.iloc[0].to_dict()
+    stats_dict['had_emergency'] = bool(stats_dict['had_emergency'])  # garantir que é boolean
+    stats_dict['max_altitude_baro'] = float(stats_dict['max_altitude_baro'])  # garantir que é float
+    stats_dict['max_ground_speed'] = float(stats_dict['max_ground_speed'])  # garantir que é float
+    
+    return stats_dict
