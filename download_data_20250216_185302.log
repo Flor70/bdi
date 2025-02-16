@@ -1,0 +1,228 @@
+2025-02-16 18:53:25,879 - INFO - Starting download of 100 files
+2025-02-16 18:53:25,893 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 18:53:26,077 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,081 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,085 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,087 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,090 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,095 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,098 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,100 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,104 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,110 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,336 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 18:53:26,434 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 18:53:26,554 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 18:53:26,629 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 18:53:26,705 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 18:53:26,707 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000050Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,782 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 18:53:26,859 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 18:53:26,861 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000055Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:26,943 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 18:53:27,015 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 18:53:27,196 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 18:53:27,199 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000100Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,211 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000105Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,311 - INFO - Successfully processed and saved 000050Z.json.gz
+2025-02-16 18:53:27,315 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000115Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,316 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000110Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,404 - INFO - Successfully processed and saved 000055Z.json.gz
+2025-02-16 18:53:27,484 - INFO - Successfully processed and saved 000100Z.json.gz
+2025-02-16 18:53:27,558 - INFO - Successfully processed and saved 000105Z.json.gz
+2025-02-16 18:53:27,560 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000130Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,560 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000120Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,645 - INFO - Successfully processed and saved 000115Z.json.gz
+2025-02-16 18:53:27,718 - INFO - Successfully processed and saved 000110Z.json.gz
+2025-02-16 18:53:27,722 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000145Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,723 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000125Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,723 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000150Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,810 - INFO - Successfully processed and saved 000130Z.json.gz
+2025-02-16 18:53:27,883 - INFO - Successfully processed and saved 000120Z.json.gz
+2025-02-16 18:53:27,888 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000155Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,889 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000200Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:27,976 - INFO - Successfully processed and saved 000145Z.json.gz
+2025-02-16 18:53:28,048 - INFO - Successfully processed and saved 000125Z.json.gz
+2025-02-16 18:53:28,122 - INFO - Successfully processed and saved 000150Z.json.gz
+2025-02-16 18:53:28,123 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000205Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,123 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000210Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,124 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000215Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,125 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000135Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,210 - INFO - Successfully processed and saved 000155Z.json.gz
+2025-02-16 18:53:28,290 - INFO - Successfully processed and saved 000200Z.json.gz
+2025-02-16 18:53:28,293 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000140Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,294 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000220Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,295 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000225Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,381 - INFO - Successfully processed and saved 000205Z.json.gz
+2025-02-16 18:53:28,453 - INFO - Successfully processed and saved 000210Z.json.gz
+2025-02-16 18:53:28,527 - INFO - Successfully processed and saved 000215Z.json.gz
+2025-02-16 18:53:28,532 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000230Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,533 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000240Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,624 - INFO - Successfully processed and saved 000220Z.json.gz
+2025-02-16 18:53:28,697 - INFO - Successfully processed and saved 000225Z.json.gz
+2025-02-16 18:53:28,702 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000235Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,703 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000245Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,704 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000250Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,794 - INFO - Successfully processed and saved 000135Z.json.gz
+2025-02-16 18:53:28,866 - INFO - Successfully processed and saved 000230Z.json.gz
+2025-02-16 18:53:28,869 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000300Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,870 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000255Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:28,944 - INFO - Successfully processed and saved 000140Z.json.gz
+2025-02-16 18:53:29,023 - INFO - Successfully processed and saved 000240Z.json.gz
+2025-02-16 18:53:29,106 - INFO - Successfully processed and saved 000235Z.json.gz
+2025-02-16 18:53:29,176 - INFO - Successfully processed and saved 000245Z.json.gz
+2025-02-16 18:53:29,249 - INFO - Successfully processed and saved 000250Z.json.gz
+2025-02-16 18:53:29,253 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000315Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,254 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000310Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,333 - INFO - Successfully processed and saved 000300Z.json.gz
+2025-02-16 18:53:29,402 - INFO - Successfully processed and saved 000255Z.json.gz
+2025-02-16 18:53:29,406 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000325Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,406 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000320Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,491 - INFO - Successfully processed and saved 000310Z.json.gz
+2025-02-16 18:53:29,562 - INFO - Successfully processed and saved 000315Z.json.gz
+2025-02-16 18:53:29,565 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000330Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,566 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000335Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,566 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000345Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,647 - INFO - Successfully processed and saved 000325Z.json.gz
+2025-02-16 18:53:29,718 - INFO - Successfully processed and saved 000320Z.json.gz
+2025-02-16 18:53:29,723 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000350Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,724 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000355Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,812 - INFO - Successfully processed and saved 000330Z.json.gz
+2025-02-16 18:53:29,883 - INFO - Successfully processed and saved 000335Z.json.gz
+2025-02-16 18:53:29,956 - INFO - Successfully processed and saved 000345Z.json.gz
+2025-02-16 18:53:29,959 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000405Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,959 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000400Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:29,960 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000410Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,040 - INFO - Successfully processed and saved 000350Z.json.gz
+2025-02-16 18:53:30,113 - INFO - Successfully processed and saved 000355Z.json.gz
+2025-02-16 18:53:30,116 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000340Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,205 - INFO - Successfully processed and saved 000405Z.json.gz
+2025-02-16 18:53:30,277 - INFO - Successfully processed and saved 000400Z.json.gz
+2025-02-16 18:53:30,348 - INFO - Successfully processed and saved 000410Z.json.gz
+2025-02-16 18:53:30,351 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000420Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,352 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000435Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,429 - INFO - Successfully processed and saved 000340Z.json.gz
+2025-02-16 18:53:30,432 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000425Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,433 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000440Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,518 - INFO - Successfully processed and saved 000420Z.json.gz
+2025-02-16 18:53:30,587 - INFO - Successfully processed and saved 000435Z.json.gz
+2025-02-16 18:53:30,590 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000450Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,591 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000445Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,592 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000455Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,671 - INFO - Successfully processed and saved 000440Z.json.gz
+2025-02-16 18:53:30,677 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000415Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,678 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000500Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,750 - INFO - Successfully processed and saved 000425Z.json.gz
+2025-02-16 18:53:30,756 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000505Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,839 - INFO - Successfully processed and saved 000450Z.json.gz
+2025-02-16 18:53:30,910 - INFO - Successfully processed and saved 000445Z.json.gz
+2025-02-16 18:53:30,982 - INFO - Successfully processed and saved 000455Z.json.gz
+2025-02-16 18:53:30,986 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000510Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,986 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000515Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:30,987 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000430Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,069 - INFO - Successfully processed and saved 000500Z.json.gz
+2025-02-16 18:53:31,074 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000520Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,146 - INFO - Successfully processed and saved 000505Z.json.gz
+2025-02-16 18:53:31,234 - INFO - Successfully processed and saved 000510Z.json.gz
+2025-02-16 18:53:31,305 - INFO - Successfully processed and saved 000515Z.json.gz
+2025-02-16 18:53:31,377 - INFO - Successfully processed and saved 000415Z.json.gz
+2025-02-16 18:53:31,378 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000535Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,379 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000540Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,458 - INFO - Successfully processed and saved 000520Z.json.gz
+2025-02-16 18:53:31,463 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000545Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,532 - INFO - Successfully processed and saved 000430Z.json.gz
+2025-02-16 18:53:31,536 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000525Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,537 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000555Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,617 - INFO - Successfully processed and saved 000535Z.json.gz
+2025-02-16 18:53:31,693 - INFO - Successfully processed and saved 000540Z.json.gz
+2025-02-16 18:53:31,697 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000550Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,698 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000530Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,782 - INFO - Successfully processed and saved 000545Z.json.gz
+2025-02-16 18:53:31,785 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000600Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,786 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000610Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,868 - INFO - Successfully processed and saved 000555Z.json.gz
+2025-02-16 18:53:31,952 - INFO - Successfully processed and saved 000550Z.json.gz
+2025-02-16 18:53:31,956 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000620Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,956 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000625Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:31,962 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000605Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,041 - INFO - Successfully processed and saved 000600Z.json.gz
+2025-02-16 18:53:32,119 - INFO - Successfully processed and saved 000525Z.json.gz
+2025-02-16 18:53:32,121 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000630Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,121 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000615Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,212 - INFO - Successfully processed and saved 000610Z.json.gz
+2025-02-16 18:53:32,282 - INFO - Successfully processed and saved 000620Z.json.gz
+2025-02-16 18:53:32,355 - INFO - Successfully processed and saved 000625Z.json.gz
+2025-02-16 18:53:32,357 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000635Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,358 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000640Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,430 - INFO - Successfully processed and saved 000530Z.json.gz
+2025-02-16 18:53:32,518 - INFO - Successfully processed and saved 000630Z.json.gz
+2025-02-16 18:53:32,591 - INFO - Successfully processed and saved 000615Z.json.gz
+2025-02-16 18:53:32,595 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000700Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,595 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000645Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,674 - INFO - Successfully processed and saved 000605Z.json.gz
+2025-02-16 18:53:32,678 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000710Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,679 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000650Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,753 - INFO - Successfully processed and saved 000635Z.json.gz
+2025-02-16 18:53:32,826 - INFO - Successfully processed and saved 000640Z.json.gz
+2025-02-16 18:53:32,830 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000655Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,912 - INFO - Successfully processed and saved 000700Z.json.gz
+2025-02-16 18:53:32,983 - INFO - Successfully processed and saved 000645Z.json.gz
+2025-02-16 18:53:32,987 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000720Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:32,988 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000705Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,067 - INFO - Successfully processed and saved 000710Z.json.gz
+2025-02-16 18:53:33,180 - INFO - Successfully processed and saved 000650Z.json.gz
+2025-02-16 18:53:33,181 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000725Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,184 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000715Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,185 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000730Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,257 - INFO - Successfully processed and saved 000655Z.json.gz
+2025-02-16 18:53:33,263 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000735Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,351 - INFO - Successfully processed and saved 000720Z.json.gz
+2025-02-16 18:53:33,428 - INFO - Successfully processed and saved 000705Z.json.gz
+2025-02-16 18:53:33,430 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000745Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,430 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000740Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,511 - INFO - Successfully processed and saved 000715Z.json.gz
+2025-02-16 18:53:33,581 - INFO - Successfully processed and saved 000730Z.json.gz
+2025-02-16 18:53:33,653 - INFO - Successfully processed and saved 000725Z.json.gz
+2025-02-16 18:53:33,658 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000750Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,728 - INFO - Successfully processed and saved 000735Z.json.gz
+2025-02-16 18:53:33,814 - INFO - Successfully processed and saved 000740Z.json.gz
+2025-02-16 18:53:33,887 - INFO - Successfully processed and saved 000745Z.json.gz
+2025-02-16 18:53:33,887 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000805Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,888 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000755Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,890 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000810Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:33,966 - INFO - Successfully processed and saved 000750Z.json.gz
+2025-02-16 18:53:34,052 - INFO - Successfully processed and saved 000805Z.json.gz
+2025-02-16 18:53:34,126 - INFO - Successfully processed and saved 000755Z.json.gz
+2025-02-16 18:53:34,199 - INFO - Successfully processed and saved 000810Z.json.gz
+2025-02-16 18:53:34,275 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000800Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:34,309 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000815Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:34,784 - INFO - Successfully processed and saved 000800Z.json.gz
+2025-02-16 18:53:34,858 - INFO - Successfully processed and saved 000815Z.json.gz
+2025-02-16 18:53:36,293 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000305Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:53:36,734 - INFO - Successfully processed and saved 000305Z.json.gz
+2025-02-16 18:53:36,738 - INFO - Download completed. Execution time: 10.85889983177185 seconds
+2025-02-16 18:53:36,738 - INFO - Successfully downloaded 715 files
+2025-02-16 18:54:17,450 - INFO - Starting download of 10 files
+2025-02-16 18:54:17,454 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 18:54:17,547 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,551 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,555 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,558 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,574 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,576 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,615 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,623 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:17,746 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 18:54:17,870 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 18:54:17,941 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 18:54:18,023 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 18:54:18,027 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:18,106 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 18:54:18,180 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 18:54:18,253 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 18:54:18,362 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 18:54:18,372 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 18:54:18,570 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 18:54:18,762 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 18:54:18,764 - INFO - Download completed. Execution time: 1.3143858909606934 seconds
+2025-02-16 18:54:18,765 - INFO - Successfully downloaded 715 files

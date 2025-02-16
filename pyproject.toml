@@ -29,6 +29,8 @@ opentelemetry-api = "1.21.0"
 opentelemetry-sdk = "1.21.0"
 opentelemetry-instrumentation-fastapi = "0.42b0"
 # Add your dependencies here
+pandas = "^2.2.3"
+pyarrow = "^19.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.5.0"
@@ -45,6 +47,7 @@ gitpython = "^3.1.40"
 moto = "^4.2.2"
 hypothesis = "^6"
 schemathesis = "^3.20"
+ipykernel = "^6.29.5"
 
 
 [tool.pytest.ini_options]

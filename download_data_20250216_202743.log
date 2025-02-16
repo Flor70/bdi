@@ -1,0 +1,179 @@
+2025-02-16 20:27:43,270 - INFO - HTTP Request: GET http://testserver/api/v0 "HTTP/1.1 307 Temporary Redirect"
+2025-02-16 20:27:43,273 - INFO - HTTP Request: GET http://testserver/api/v0/ "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,279 - INFO - HTTP Request: GET http://testserver/api/v0/items/1?q=param "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,284 - INFO - HTTP Request: GET http://testserver/api/v0/items/5 "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,289 - INFO - HTTP Request: GET http://testserver/api/v0/not_existant "HTTP/1.1 404 Not Found"
+2025-02-16 20:27:43,292 - INFO - Starting download of 1 files
+2025-02-16 20:27:43,293 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:43,453 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,710 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:43,711 - INFO - Download completed. Execution time: 0.4188671112060547 seconds
+2025-02-16 20:27:43,711 - INFO - Successfully downloaded 1 files
+2025-02-16 20:27:43,711 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=1 "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,714 - INFO - Starting download of 10 files
+2025-02-16 20:27:43,714 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:43,808 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,821 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,824 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,827 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,840 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,845 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,850 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,855 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,869 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:43,912 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:44,078 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:44,220 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 20:27:44,354 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 20:27:44,494 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 20:27:44,627 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 20:27:44,765 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 20:27:44,898 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 20:27:45,026 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 20:27:45,159 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 20:27:45,287 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 20:27:45,289 - INFO - Download completed. Execution time: 1.5749001502990723 seconds
+2025-02-16 20:27:45,289 - INFO - Successfully downloaded 10 files
+2025-02-16 20:27:45,290 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=10 "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,294 - INFO - Starting download of 10 files
+2025-02-16 20:27:45,295 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:45,394 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,398 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,402 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,408 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,416 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,417 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,421 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,436 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,466 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,481 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:45,624 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 20:27:45,771 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 20:27:45,899 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 20:27:46,037 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 20:27:46,177 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 20:27:46,307 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:46,443 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 20:27:46,571 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 20:27:46,699 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 20:27:46,826 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 20:27:46,827 - INFO - Download completed. Execution time: 1.5338072776794434 seconds
+2025-02-16 20:27:46,828 - INFO - Successfully downloaded 10 files
+2025-02-16 20:27:46,828 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=10 "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,467 - INFO - Processed chunk 1 of 1
+2025-02-16 20:27:48,761 - INFO - Execution time: 1.9321529865264893
+2025-02-16 20:27:48,838 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/prepare "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,849 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/?page=0&num_results=5 "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,856 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/?page=1&num_results=5 "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,862 - INFO - Starting download of 10 files
+2025-02-16 20:27:48,863 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:48,969 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,972 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,981 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,987 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,990 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:48,995 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:49,008 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:49,011 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:49,015 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:49,064 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:49,207 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 20:27:49,378 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 20:27:49,507 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 20:27:49,650 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 20:27:49,776 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 20:27:49,976 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 20:27:50,113 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 20:27:50,239 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 20:27:50,368 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:50,497 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 20:27:50,497 - INFO - Download completed. Execution time: 1.6356959342956543 seconds
+2025-02-16 20:27:50,498 - INFO - Successfully downloaded 10 files
+2025-02-16 20:27:50,498 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=10 "HTTP/1.1 200 OK"
+2025-02-16 20:27:51,824 - INFO - Processed chunk 1 of 1
+2025-02-16 20:27:52,132 - INFO - Execution time: 1.6334290504455566
+2025-02-16 20:27:52,197 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/prepare "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,198 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft "HTTP/1.1 307 Temporary Redirect"
+2025-02-16 20:27:52,207 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/ "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,246 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/000000/positions?page=0&num_results=5 "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,250 - INFO - Starting download of 10 files
+2025-02-16 20:27:52,252 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:52,362 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,390 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,392 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,402 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,407 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,413 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,415 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,422 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,428 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,440 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:52,592 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:52,788 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 20:27:52,914 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 20:27:53,044 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 20:27:53,183 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 20:27:53,323 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 20:27:53,458 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 20:27:53,588 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 20:27:53,719 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 20:27:53,848 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 20:27:53,849 - INFO - Download completed. Execution time: 1.5995779037475586 seconds
+2025-02-16 20:27:53,850 - INFO - Successfully downloaded 10 files
+2025-02-16 20:27:53,850 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=10 "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,196 - INFO - Processed chunk 1 of 1
+2025-02-16 20:27:55,473 - INFO - Execution time: 1.6224191188812256
+2025-02-16 20:27:55,539 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/prepare "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,539 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft "HTTP/1.1 307 Temporary Redirect"
+2025-02-16 20:27:55,547 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/ "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,555 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/000000/stats "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,558 - INFO - Starting download of 10 files
+2025-02-16 20:27:55,559 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:55,664 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000040Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,666 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000010Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,669 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000035Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,675 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000005Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,678 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000015Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,691 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000020Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,695 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000045Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,702 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000030Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,707 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000025Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,720 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:55,890 - INFO - Successfully processed and saved 000010Z.json.gz
+2025-02-16 20:27:56,023 - INFO - Successfully processed and saved 000035Z.json.gz
+2025-02-16 20:27:56,161 - INFO - Successfully processed and saved 000040Z.json.gz
+2025-02-16 20:27:56,306 - INFO - Successfully processed and saved 000005Z.json.gz
+2025-02-16 20:27:56,441 - INFO - Successfully processed and saved 000015Z.json.gz
+2025-02-16 20:27:56,594 - INFO - Successfully processed and saved 000025Z.json.gz
+2025-02-16 20:27:56,728 - INFO - Successfully processed and saved 000020Z.json.gz
+2025-02-16 20:27:56,857 - INFO - Successfully processed and saved 000030Z.json.gz
+2025-02-16 20:27:56,986 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:57,157 - INFO - Successfully processed and saved 000045Z.json.gz
+2025-02-16 20:27:57,158 - INFO - Download completed. Execution time: 1.6007721424102783 seconds
+2025-02-16 20:27:57,159 - INFO - Successfully downloaded 10 files
+2025-02-16 20:27:57,159 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=10 "HTTP/1.1 200 OK"
+2025-02-16 20:27:58,637 - INFO - Processed chunk 1 of 1
+2025-02-16 20:27:58,922 - INFO - Execution time: 1.7621901035308838
+2025-02-16 20:27:58,995 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/prepare "HTTP/1.1 200 OK"
+2025-02-16 20:27:58,995 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft "HTTP/1.1 307 Temporary Redirect"
+2025-02-16 20:27:59,012 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/ "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,054 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/000000/positions "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,061 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/000000/stats "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,103 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/000001/positions "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,110 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/000001/stats "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,149 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/0000d2/positions "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,156 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/0000d2/stats "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,166 - INFO - Starting download of 1 files
+2025-02-16 20:27:59,168 - INFO - Created semaphore with limit of 10 concurrent connections
+2025-02-16 20:27:59,303 - INFO - HTTP Request: GET https://samples.adsbexchange.com/readsb-hist/2023/11/01//000000Z.json.gz "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,502 - INFO - Successfully processed and saved 000000Z.json.gz
+2025-02-16 20:27:59,502 - INFO - Download completed. Execution time: 0.3365018367767334 seconds
+2025-02-16 20:27:59,502 - INFO - Successfully downloaded 1 files
+2025-02-16 20:27:59,503 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/download?file_limit=1 "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,657 - INFO - Processed chunk 1 of 1
+2025-02-16 20:27:59,718 - INFO - Execution time: 0.2132549285888672
+2025-02-16 20:27:59,723 - INFO - HTTP Request: POST http://testserver/api/s1/aircraft/prepare "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,725 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft "HTTP/1.1 307 Temporary Redirect"
+2025-02-16 20:27:59,733 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/ "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,743 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/06a0af/positions "HTTP/1.1 200 OK"
+2025-02-16 20:27:59,751 - INFO - HTTP Request: GET http://testserver/api/s1/aircraft/06a0af/stats "HTTP/1.1 200 OK"
