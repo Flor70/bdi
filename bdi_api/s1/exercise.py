@@ -25,16 +25,14 @@ s1 = APIRouter(
     tags=["s1"],
 )
 
-# Configuração do logger
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(f'download_data_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'),
-        logging.StreamHandler()
-    ]
-)
+# Configuração do logger apenas para console
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+console_handler.setFormatter(formatter)
+logger.handlers = [console_handler]  # Substitui todos os handlers existentes
 
 @s1.post("/aircraft/download")
 async def download_data(
