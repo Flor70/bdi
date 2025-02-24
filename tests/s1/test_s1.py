@@ -22,15 +22,16 @@ class TestS1Student:
         with client as client:
             response = client.post("/api/s1/aircraft/download?file_limit=10")
             assert response.status_code == 200
-            
+
             # Verifica se os arquivos foram salvos com nomes no formato correto
             import glob
             import os
+
             from bdi_api.settings import Settings
-            
+
             settings = Settings()
             files = glob.glob(os.path.join(settings.raw_dir, "day=20231101", "*.parquet"))
-            
+
             for f in files:
                 # Extrai o timestamp do nome do arquivo (removendo .parquet)
                 time_str = os.path.basename(f).replace('.parquet', '')
@@ -38,7 +39,7 @@ class TestS1Student:
                 hours = int(time_str[:2])
                 minutes = int(time_str[2:4])
                 seconds = int(time_str[4:6])
-                
+
                 assert 0 <= hours <= 23, f"Horas inválidas: {hours}"
                 assert 0 <= minutes <= 59, f"Minutos inválidos: {minutes}"
                 assert seconds % 5 == 0 and seconds < 60, f"Segundos inválidos: {seconds}"
@@ -49,17 +50,17 @@ class TestS1Student:
             # Primeiro, garante que temos dados preparados
             client.post("/api/s1/aircraft/download?file_limit=10")
             client.post("/api/s1/aircraft/prepare")
-            
+
             # Testa primeira página
             response = client.get("/api/s1/aircraft/?page=0&num_results=5")
             assert response.status_code == 200
             first_page = response.json()
             assert len(first_page) <= 5
-            
+
             # Testa segunda página
             response = client.get("/api/s1/aircraft/?page=1&num_results=5")
             second_page = response.json()
-            
+
             # Verifica que as páginas são diferentes
             if len(second_page) > 0:
                 assert first_page[0]['icao'] != second_page[0]['icao']
@@ -70,17 +71,17 @@ class TestS1Student:
             # Primeiro, garante que temos dados preparados
             client.post("/api/s1/aircraft/download?file_limit=10")
             client.post("/api/s1/aircraft/prepare")
-            
+
             # Obtém um ICAO válido
             response = client.get("/api/s1/aircraft")
             icao = response.json()[0]['icao']
-            
+
             # Testa paginação das posições
             response = client.get(f"/api/s1/aircraft/{icao}/positions?page=0&num_results=5")
             assert response.status_code == 200
             positions = response.json()
             assert len(positions) <= 5
-            
+
             if len(positions) > 0:
                 # Verifica ordenação por timestamp
                 timestamps = [p['timestamp'] for p in positions]
@@ -92,23 +93,23 @@ class TestS1Student:
             # Primeiro, garante que temos dados preparados
             client.post("/api/s1/aircraft/download?file_limit=10")
             client.post("/api/s1/aircraft/prepare")
-            
+
             # Obtém um ICAO válido
             response = client.get("/api/s1/aircraft")
             icao = response.json()[0]['icao']
-            
+
             # Obtém estatísticas
             response = client.get(f"/api/s1/aircraft/{icao}/stats")
             assert response.status_code == 200
             stats = response.json()
-            
+
             # Verifica tipos de dados, permitindo None
             for field in ['max_altitude_baro', 'max_ground_speed']:
                 assert stats[field] is None or isinstance(stats[field], (int, float)), \
                     f"Campo {field} deve ser None ou numérico"
                 if stats[field] is not None:
                     assert stats[field] >= 0, f"Campo {field} deve ser não-negativo quando presente"
-            
+
             # had_emergency é sempre booleano, mesmo que False
             assert isinstance(stats['had_emergency'], bool)
 
@@ -118,21 +119,21 @@ class TestS1Student:
             # Primeiro, garante que temos dados preparados
             client.post("/api/s1/aircraft/download?file_limit=10")
             client.post("/api/s1/aircraft/prepare")
-            
+
             # Obtém lista de aeronaves
             response = client.get("/api/s1/aircraft")
             aircraft_list = response.json()
-            
+
             # Para cada aeronave, verifica consistência dos dados
             for aircraft in aircraft_list[:3]:  # Testa as 3 primeiras para não demorar muito
                 icao = aircraft['icao']
-                
+
                 # Verifica posições
                 response = client.get(f"/api/s1/aircraft/{icao}/positions")
                 positions = response.json()
                 if len(positions) > 0:
                     assert all(p['icao'] == icao for p in positions)
-                
+
                 # Verifica estatísticas
                 response = client.get(f"/api/s1/aircraft/{icao}/stats")
                 stats = response.json()
