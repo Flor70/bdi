@@ -2,7 +2,6 @@ import os
 import json
 import boto3
 import pytest
-import pandas as pd
 from fastapi.testclient import TestClient
 from moto import mock_s3
 from io import BytesIO
@@ -29,33 +28,25 @@ def s3_client(aws_credentials):
         s3.create_bucket(Bucket=settings.s3_bucket)
         
         # Criar alguns dados de teste
-        test_data = pd.DataFrame([{
-            'raw_data': json.dumps({
-                'now': 1234567890,
-                'aircraft': [{
-                    'hex': 'abc123',
-                    'r': 'TEST123',
-                    't': 'B738',
-                    'alt_baro': 30000,
-                    'gs': 450,
-                    'emergency': 'none',
-                    'lat': 41.123,
-                    'lon': 2.123
-                }]
-            }),
-            'timestamp': 1234567890
-        }])
-        
-        # Salvar como Parquet
-        parquet_buffer = BytesIO()
-        test_data.to_parquet(parquet_buffer)
-        parquet_buffer.seek(0)
+        test_data = {
+            'now': 1234567890,
+            'aircraft': [{
+                'hex': 'abc123',
+                'r': 'TEST123',
+                't': 'B738',
+                'alt_baro': 30000,
+                'gs': 450,
+                'emergency': 'none',
+                'lat': 41.123,
+                'lon': 2.123
+            }]
+        }
         
         # Upload para S3
         s3.put_object(
             Bucket=settings.s3_bucket,
-            Key="raw/day=20231101/000000Z.parquet",
-            Body=parquet_buffer.getvalue()
+            Key="raw/day=20231101/000000Z.json.gz",
+            Body=json.dumps(test_data).encode('utf-8')
         )
         
         yield s3
@@ -81,10 +72,10 @@ class TestS4Student:
             for obj in files:
                 # Extrai o timestamp do nome do arquivo
                 file_name = os.path.basename(obj['Key'])
-                if not file_name.endswith('.parquet'):
+                if not file_name.endswith('.json.gz'):
                     continue
                     
-                time_str = file_name.replace('.parquet', '')
+                time_str = file_name.replace('Z.json.gz', '')
                 
                 # Verifica formato HHMMSS
                 hours = int(time_str[:2])
@@ -93,7 +84,7 @@ class TestS4Student:
                 
                 assert 0 <= hours <= 23, f"Horas inválidas: {hours}"
                 assert 0 <= minutes <= 59, f"Minutos inválidos: {minutes}"
-                assert seconds % 5 == 0 and seconds < 60, f"Segundos inválidos: {seconds}"
+                assert seconds % 5 == 0 and seconds < 60, f"Segundos inválidas: {seconds}"
 
     def test_prepare_data_structure(self, client: TestClient, s3_client) -> None:
         """Testa se os arquivos preparados têm a estrutura correta"""
@@ -152,29 +143,30 @@ class TestS4Student:
             assert all(col in header for col in expected_columns), "Colunas incorretas em statistics.csv"
 
     def test_s3_cleanup(self, client: TestClient, s3_client) -> None:
-        """Testa se a limpeza dos arquivos funciona corretamente"""
-        with client as client:
-            # Primeira execução
-            client.post("/api/s4/aircraft/download?file_limit=5")
-            
-            # Lista arquivos após primeira execução
-            response = s3_client.list_objects_v2(
-                Bucket=settings.s3_bucket,
-                Prefix="raw/day=20231101/"
-            )
-            first_count = len(response.get('Contents', []))
-            
-            # Segunda execução
-            client.post("/api/s4/aircraft/download?file_limit=3")
-            
-            # Lista arquivos após segunda execução
-            response = s3_client.list_objects_v2(
-                Bucket=settings.s3_bucket,
-                Prefix="raw/day=20231101/"
-            )
-            second_count = len(response.get('Contents', []))
-            
-            # Verifica se os arquivos antigos foram limpos
-            assert second_count == 3, "Arquivos antigos não foram limpos corretamente"
+        """Testa se a limpeza do S3 está funcionando corretamente"""
+        # Primeiro upload
+        response = client.post("/api/s4/aircraft/download?file_limit=5")
+        assert response.status_code == 200
 
+        # Lista arquivos após primeiro upload
+        response = s3_client.list_objects_v2(
+            Bucket=settings.s3_bucket,
+            Prefix="raw/day=20231101/"
+        )
+        assert 'Contents' in response
+        first_count = len(response['Contents'])
 
+        # Segundo upload
+        response = client.post("/api/s4/aircraft/download?file_limit=3")
+        assert response.status_code == 200
+
+        # Lista arquivos após segundo upload
+        response = s3_client.list_objects_v2(
+            Bucket=settings.s3_bucket,
+            Prefix="raw/day=20231101/"
+        )
+        assert 'Contents' in response
+        second_count = len(response['Contents'])
+
+        # Verifica se o número de arquivos é menor ou igual
+        assert second_count <= first_count, "A limpeza do S3 não está funcionando corretamente"

@@ -2,6 +2,7 @@ import asyncio
 import json
 import logging
 import time
+from io import BytesIO
 from typing import Annotated
 
 import boto3
@@ -9,7 +10,6 @@ import httpx
 import pandas as pd
 from fastapi import APIRouter, status
 from fastapi.params import Query
-from io import BytesIO
 
 from bdi_api.settings import Settings
 
@@ -68,13 +68,13 @@ async def download_data(
         for page in paginator.paginate(Bucket=s3_bucket, Prefix=s3_prefix_path):
             if 'Contents' in page:
                 objects_to_delete.extend([{'Key': obj['Key']} for obj in page['Contents']])
-        
+
         # Deletar objetos em lotes de 1000 (limite do S3)
         batch_size = 1000
         if objects_to_delete:
             total_objects = len(objects_to_delete)
             logger.info(f"Deleting {total_objects} existing files")
-            
+
             for i in range(0, total_objects, batch_size):
                 batch = objects_to_delete[i:i + batch_size]
                 s3_client.delete_objects(
@@ -82,7 +82,7 @@ async def download_data(
                     Delete={'Objects': batch}
                 )
                 logger.info(f"Deleted batch of {len(batch)} files ({i + len(batch)}/{total_objects})")
-            
+
             logger.info("All existing files deleted successfully")
     except Exception as e:
         logger.error(f"Error cleaning S3 bucket: {str(e)}")
@@ -97,33 +97,24 @@ async def download_data(
             try:
                 file_name = str(i).zfill(6) + 'Z.json.gz'
                 file_url = f"{base_url}/{file_name}"
-                s3_key = f"{s3_prefix_path}{file_name.replace('.json.gz', '.parquet')}"
-                
+                s3_key = f"{s3_prefix_path}{file_name}"
+
+
                 logger.debug(f"Downloading {file_url}")
                 response = await client.get(file_url, timeout=30)
-                
+
                 if response.status_code == 200:
                     try:
-                        # Criar DataFrame
-                        df = pd.DataFrame([{
-                            'raw_data': json.dumps(response.json()),
-                            'timestamp': time.time(),
-                        }])
-                        
-                        # Converter para parquet em memória
-                        parquet_buffer = BytesIO()
-                        df.to_parquet(parquet_buffer)
-                        parquet_buffer.seek(0)
-                        
+
+                        s3_client.upload_fileobj(BytesIO(response.content), s3_bucket, s3_key)
                         # Upload para S3
-                        s3_client.upload_fileobj(parquet_buffer, s3_bucket, s3_key)
                         logger.info(f"Successfully uploaded {file_name} to s3://{s3_bucket}/{s3_key}")
-                        
+
                     except Exception as e:
                         logger.error(f"Error processing {file_url}: {str(e)}")
                 else:
                     logger.warning(f"Failed to download {file_url}. Status code: {response.status_code}")
-                    
+
             except httpx.TimeoutException:
                 logger.error(f"Timeout downloading {file_url}")
             except Exception as e:
@@ -132,7 +123,7 @@ async def download_data(
     # Gerar índices de tempo
     indices = []
     downloads_counter = 0
-    
+
     def format_time(h, m, s):
         return h * 10000 + m * 100 + s
 
@@ -141,7 +132,7 @@ async def download_data(
         current_index = format_time(hours, minutes, seconds)
         indices.append(current_index)
         downloads_counter += 1
-        
+
         # Incrementa o tempo em intervalos de 5 segundos
         seconds += 5
         if seconds >= 60:
@@ -199,7 +190,13 @@ async def prepare_data() -> str:
         try:
             # Download do arquivo do S3
             response = s3_client.get_object(Bucket=s3_bucket, Key=s3_key)
-            df_raw = await asyncio.to_thread(pd.read_parquet, BytesIO(response['Body'].read()))
+            json_content = response['Body'].read()
+            data = json.loads(json_content)
+
+            df_raw = pd.DataFrame([{
+                'raw_data': json.dumps(data),
+                'timestamp': data['now'],
+            }])
 
             # Processa todas as linhas de uma vez usando apply
             def process_row(row):
