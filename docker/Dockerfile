@@ -33,7 +33,7 @@ ENV APP_DIR /opt/app
 ENV BDI_LOCAL_DIR /opt/data
 ENV PATH="${APP_DIR}/.venv/bin:${PATH}"
 
-RUN mkdir $BDI_LOCAL_DIR \
+RUN mkdir -p $BDI_LOCAL_DIR \
     && apt-get update \
     && apt-get purge --auto-remove -yqq \
     && apt-get autoremove -yqq --purge \
@@ -47,7 +47,8 @@ RUN mkdir $BDI_LOCAL_DIR \
         /usr/share/doc \
         /usr/share/doc-base \
     && groupadd -r $USER && useradd --no-log-init -rm -g $USER $USER \
-    && chown -R $USER:$USER $BDI_LOCAL_DIR
+    && chown -R $USER:$USER $BDI_LOCAL_DIR \
+    && chown -R $USER:$USER $APP_DIR
 
 WORKDIR $APP_DIR
 COPY --from=build --chown=$USER:$USER ${APP_DIR}/.venv ${APP_DIR}/.venv

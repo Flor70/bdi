@@ -30,7 +30,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(f'download_data_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'),
+        logging.FileHandler(os.path.join(os.environ.get('BDI_LOCAL_DIR', '.'), 'app.log')),
         logging.StreamHandler()
     ]
 )
