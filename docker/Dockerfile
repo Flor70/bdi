@@ -1,6 +1,6 @@
 FROM python:3.11-slim AS build
 
-ENV APP_DIR /opt/app
+ENV APP_DIR=/opt/app
 WORKDIR $APP_DIR
 
 RUN apt-get update \
@@ -28,9 +28,9 @@ RUN poetry build && .venv/bin/pip install dist/*.whl
 FROM python:3.11-slim AS deploy
 
 EXPOSE 8080
-ENV USER app-user
-ENV APP_DIR /opt/app
-ENV BDI_LOCAL_DIR /opt/data
+ENV USER=app-user
+ENV APP_DIR=/opt/app
+ENV BDI_LOCAL_DIR=/opt/data
 ENV PATH="${APP_DIR}/.venv/bin:${PATH}"
 
 RUN mkdir -p $BDI_LOCAL_DIR \
@@ -47,11 +47,13 @@ RUN mkdir -p $BDI_LOCAL_DIR \
         /usr/share/doc \
         /usr/share/doc-base \
     && groupadd -r $USER && useradd --no-log-init -rm -g $USER $USER \
-    && chown -R $USER:$USER $BDI_LOCAL_DIR \
-    && chown -R $USER:$USER $APP_DIR
+    && chown -R $USER:$USER $BDI_LOCAL_DIR
 
-WORKDIR $APP_DIR
 COPY --from=build --chown=$USER:$USER ${APP_DIR}/.venv ${APP_DIR}/.venv
+COPY --from=build ${APP_DIR} ${APP_DIR}
+RUN chown -R $USER:$USER $APP_DIR
 
 USER $USER
+WORKDIR $APP_DIR
+
 CMD ["uvicorn", "bdi_api.app:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "8080"]

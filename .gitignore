@@ -48,3 +48,16 @@ htmlcov/
 # Data
 data/raw/*
 data/prepared/*
+
+# Terraform
+.terraform/
+terraform/.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+tfplan
+
+# Large files
+*.tar
+*.gz
+*.zip
