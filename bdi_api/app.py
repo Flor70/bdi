@@ -14,6 +14,7 @@ from bdi_api.examples import v0_router
 # from bdi_api.s1.exercise import s1
 from bdi_api.s1.exercise import s1
 from bdi_api.s4.exercise import s4
+from bdi_api.s7.exercise import s7
 from bdi_api.settings import Settings
 
 logger = logging.getLogger("uvicorn.error")
@@ -22,7 +23,8 @@ logger = logging.getLogger("uvicorn.error")
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator:
     logger.setLevel(logging.INFO)
-    logger.info("Application started. You can check the documentation in http://localhost:8080/docs/")
+    logger.info(
+        "Application started. You can check the documentation in http://localhost:8080/docs/")
     yield
     # Shut Down
     logger.warning("Application shutdown")
@@ -65,6 +67,7 @@ if settings.telemetry:
 app.include_router(v0_router)
 app.include_router(s1)
 app.include_router(s4)
+app.include_router(s7)
 
 
 @app.get("/health", status_code=200)
@@ -83,7 +86,8 @@ async def get_version() -> dict:
 def main() -> None:
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8080, proxy_headers=True, access_log=False)
+    uvicorn.run(app, host="0.0.0.0", port=8080,
+                proxy_headers=True, access_log=False)
 
 
 if __name__ == "__main__":
