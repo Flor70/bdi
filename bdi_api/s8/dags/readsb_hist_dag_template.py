@@ -48,6 +48,7 @@ dag = DAG(
     description='Download and process readsb-hist data',
     schedule_interval='@monthly',  # Run once a month
     catchup=False,
+    tags=["bdi", "s8", "adsb_exchange"],
 )
 
 

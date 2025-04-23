@@ -139,3 +139,19 @@ To run the automated API tests:
     poetry run pytest tests/s8/test_exercise.py
     ```
     All tests should pass.
+
+### DAG Integrity Tests
+
+The project includes DAG integrity tests in `tests/dags/test_dag_integrity.py`. These tests check for basic DAG correctness (import errors, tags, retries).
+
+**Important:** Due to dependency conflicts between the main application (requiring SQLAlchemy 2.x) and Airflow 2.x (requiring SQLAlchemy 1.x), these DAG tests **must be run inside the running Airflow container** (e.g., the scheduler) where the correct Airflow libraries are installed via the Astro environment.
+
+To run the DAG integrity tests:
+
+1.  Ensure the Astro environment is running (`astro dev start`).
+2.  Find the scheduler container name (e.g., using `docker ps`).
+3.  Execute the tests using `docker exec`:
+    ```bash
+    # Replace <scheduler_container_name> with the actual name
+    docker exec <scheduler_container_name> pytest /usr/local/airflow/tests/dags/test_dag_integrity.py
+    ```
